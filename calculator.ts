@@ -19,3 +19,10 @@ export function add(numbers: string): number {
 
     return numArray.reduce((acc, num) => acc + num, 0);
 }
+
+console.log(add("")); // Output - 0
+console.log(add("1")); // Output - 1
+console.log(add("1,2")); // Output - 3
+console.log(add("1\n2,3")); // Output - 6
+console.log(add("//;\n1;2")); // Output - 3
+console.log(add("1,-2,3")); // Output - negative numbers not allowed: -2
